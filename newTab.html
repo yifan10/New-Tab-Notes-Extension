@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Tab</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="newTab.js"></script>
+    <link rel="stylesheet" type="text/css" href="newTab.css" />
+</head>
+
+<body>
+    <div class="timeContainer">
+        <div class="date" id="date"></div>
+        <div id="time" class="time"></div>
+    </div>
+
+
+
+    <!-- add the word of the day-->
+    <section class="word">
+        <div class="theWord" id="theWord"></div>
+    </section>
+
+    <div class="searchContainer">
+        <input type="text" id="search" class="search" placeholder="Search" />
+        <button type="submit" id="searchBtn" class="searchBtn"></button>
+    </div>
+
+
+    <div class="notes" id="notes">
+        <div id="main" class="main">
+            <aside class="sidebar">
+                <h1>Notes</h1>
+                <div id="noteTitles" class="noteTitles"></div>
+                <div id="noteBtns" class="noteBtns">
+                    <button class="createNew" id="createNew" type="button">
+                        Create
+                    </button>
+                    <button class="hide" id="hide" type="button">Hide</button>
+                </div>
+            </aside>
+        </div>
+
+        <div class="detail" id="detail">
+            <div class="detailChild" class="detailChild">
+                <section class="holder" id="holder">
+                    <h1 id="title" class="title" contenteditable="true" placeholder="Untitled"></h1>
+                    <div id="post-body" class="post-body" contenteditable="true" placeholder="Write your post here..."></div>
+                    <div class="buttons" id="buttons">
+                        <button class="save" id="save" type="button">Save</button>
+                        <button class="close" id="close" type="close">Close</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <button class="openNotes" id="openNotes" type="button">+ Notes</button>
+
+    <div class='pc' id='pc'></div>
+
+</body>
+
+</html>

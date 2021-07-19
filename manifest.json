@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "New Tab For Notes",
+    "version": "1.0",
+    "description": "Take notes when needed",
+    
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "icons": {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+    "browser_action":{
+        "default_icon": "icon16.png"
+    },
+
+    "permissions": [
+        "storage"
+    ]
+}
+    
