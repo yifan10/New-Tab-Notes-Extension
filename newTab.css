@@ -1,0 +1,249 @@
+body,
+html {
+  height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+}
+
+.pc {
+  bottom: 1%;
+  position: absolute;
+  text-align: center;
+  width: -webkit-fill-available;
+  color: white;
+  font-size: small;
+}
+
+.timeContainer {
+  float: right;
+  margin: 1% 2%;
+  font-size: 20px;
+  color: white;
+}
+
+.time {
+  text-align: center;
+}
+
+.date {
+  float: left;
+  font: 500;
+}
+
+h1 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-weight: 900;
+}
+
+.notes {
+  display: flex;
+  color: white;
+  border-radius: 20px;
+  width: 70%;
+  position: absolute;
+  bottom: 10%;
+  min-height: 25%;
+}
+
+.main {
+  display: flex;
+  background: rgba(0, 0, 0, 0.8);
+  width: 30%;
+  overflow: hidden;
+  border: 2px solid grey;
+}
+
+aside.sidebar {
+  width: 80%;
+  padding: 10%;
+}
+
+.detail {
+  background: rgba(0, 0, 0, 0.8);
+  width: 70%;
+  border: 2px solid grey;
+}
+
+.title,
+.post-body {
+  padding: 0.1%;
+  height: 30%;
+}
+.post-body {
+  position: absolute;
+  bottom: 30%;
+  overflow: scroll;
+}
+
+.detailChild {
+  padding: 5%;
+  width: 90%;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10%;
+  width: 30%;
+}
+
+.holder div.icon {
+  cursor: pointer;
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
+}
+
+[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: white;
+  cursor: text;
+  opacity: 70%;
+}
+
+[placeholder]:empty:focus:before {
+  content: " ";
+}
+
+.word {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+}
+
+.theWord {
+  font-size: 5em;
+  margin-top: 5%;
+}
+
+/*button*/
+.openNotes {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border: none;
+  position: absolute;
+  left: 2%;
+  height: 50px;
+  font-size: 1.3em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  bottom: 3%;
+  border-radius: 3px;
+}
+.openNotes:hover {
+  background: #fff;
+  color: black;
+}
+.openNotes:before,
+.openNotes:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: black;
+  transition: 400ms ease all;
+}
+.openNotes:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.openNotes:hover:before,
+.openNotes:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+.noteBtns {
+  flex-direction: column;
+}
+
+.hide:hover,
+.createNew:hover,
+.save:hover,
+.close:hover {
+  background: white;
+  color: #ff9292;
+}
+.hide,
+.createNew,
+.save,
+.close {
+  background: white;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 1px solid black;
+  transition: all 0.5s ease-in-out;
+  padding: 2%;
+  font-size: 1rem;
+  outline: none;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.noteTitles {
+  cursor: pointer;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+.deleteBtn {
+  float: right;
+  background: none;
+}
+
+/*searchBar*/
+.searchContainer {
+  text-align: center;
+  height: 10%;
+  margin-top: 5%;
+}
+
+input#search {
+  font-family: inherit;
+  width: 50%;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.searchBtn {
+  width: 32px;
+  height: 32px;
+  border: 0px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABbElEQVRIia2VsU4CQRRFnxRYiJ02LIWFPX/gZ4DaaaEGkIoGO39LQoyCrVba0GgBaAy9SrLHwrvJSnB2RvY1s5m99515M/tmzRYC2ATaQB+YAF8a+8A5UFr0eAewD7zhjleg9p/kF0CsJLdAHSgDRSASfKD3MdANXXkMzIGzDG1DutirEu15si3O5AsQgGnmmehAAW58kqd8Q/laWcK+hPVAwIF8vSzhRMJyICCSb5wl/JSwGAhYl+/DpSuY2UzPWyEAM9vWOHOJCmb2pOe9QECif3Sq1P4AA9/MwBpwJ18zS1xS+wM0PAEt7z6QoZbqZCdEyecCdHwWlBi7qbtoqO+8oruoAhymtiWJd6AaAqmpbFdMgY6SJ5Bj4NKrl3QmTaAHjNUnY+BK8xvSVVOQJEZAxbsij8UcLanwF6SwImNnydyumV3nUgk/P6TRH2c1AqI8IJEDcr8yIAPykgvAATnJDZCCPADPwKmZ2TdWELCQQJ/4TwAAAABJRU5ErkJggg==");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-left: 8px;
+}
